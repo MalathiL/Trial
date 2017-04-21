@@ -1,0 +1,90 @@
+                    Table "public.bbo_px_equity_euro"
+            Column             |            Type             | Modifiers 
+-------------------------------+-----------------------------+-----------
+ bbo_file_date                 | date                        | not null
+ last_update_ts                | timestamp without time zone | 
+ bbo_filename                  | character varying           | 
+ ticker                        | character varying           | not null
+ exch_code                     | character varying           | not null
+ id_sedol1                     | character varying           | 
+ id_wertpapier                 | character varying           | 
+ id_isin                       | character varying           | 
+ id_dutch                      | character varying           | 
+ id_valoren                    | character varying           | 
+ id_french                     | character varying           | 
+ id_belgium                    | character varying           | 
+ id_bb_company                 | integer                     | 
+ id_bb_security                | integer                     | 
+ id_cusip                      | character varying           | 
+ id_common                     | character varying           | 
+ high_52week                   | numeric                     | 
+ low_52week                    | numeric                     | 
+ high_dt_52week                | date                        | 
+ low_dt_52week                 | date                        | 
+ px_bid                        | numeric                     | 
+ px_mid                        | numeric                     | 
+ px_ask                        | numeric                     | 
+ px_open                       | numeric                     | 
+ px_high                       | numeric                     | 
+ px_low                        | numeric                     | 
+ px_last                       | numeric                     | 
+ px_fixing                     | numeric                     | 
+ px_volume                     | bigint                      | 
+ pricing_source                | character varying           | 
+ last_update                   | date                        | 
+ eqy_beta                      | real                        | 
+ cur_mkt_cap                   | real                        | 
+ eqy_sh_out                    | real                        | 
+ crncy                         | character varying           | 
+ id_local                      | character varying           | 
+ px_quote_lot_size             | real                        | 
+ last_update_dt_exch_tz        | date                        | 
+ eqy_prim_exch                 | character varying           | 
+ eqy_prim_exch_shrt            | character varying           | 
+ security_typ                  | character varying           | 
+ name                          | character varying           | 
+ id_bb_prim_security_flag      | character varying           | 
+ eqy_prim_security_comp_exch   | character varying           | 
+ market_status                 | character varying           | 
+ eqy_float                     | real                        | 
+ eqy_dvd_yld_ind               | real                        | 
+ eqy_dvd_yld_12m               | real                        | 
+ eqy_dvd_yld_12m_net           | real                        | 
+ id_bb_unique                  | character varying           | 
+ market_sector_des             | character varying           | not null
+ cntry_issue_iso               | character varying           | 
+ px_round_lot_size             | bigint                      | 
+ composite_exch_code           | character varying           | 
+ px_nasdaq_close               | numeric                     | 
+ eqy_sh_out_real               | real                        | 
+ cntry_of_incorporation        | character varying           | 
+ cntry_of_domicile             | character varying           | 
+ mkt_cap_listed                | real                        | 
+ px_trade_lot_size             | bigint                      | 
+ id_sedol2                     | character varying           | 
+ sedol1_country_iso            | character varying           | 
+ sedol2_country_iso            | character varying           | 
+ id_mic_prim_exch              | character varying           | 
+ id_mic_local_exch             | character varying           | 
+ ticker_and_exch_code          | character varying           | 
+ id_exch_symbol                | character varying           | 
+ id_bb_connect                 | bigint                      | 
+ off_on_exch_volume            | bigint                      | 
+ exch_mkt_grp                  | character varying           | 
+ exch_sub_mkt_grp              | character varying           | 
+ mkt_of_ref_info               | character varying           | 
+ place_of_settlement           | character varying           | 
+ group_name_static             | character varying           | 
+ id_bb_sec_num_src             | character varying           | 
+ settle_dt                     | date                        | 
+ id_bb_global                  | character varying           | not null
+ composite_id_bb_global        | character varying           | 
+ id_bb_sec_num_des             | character varying           | 
+ feed_source                   | character varying           | 
+ px_off_exch_volume            | bigint                      | 
+ trading_system_identifier     | character varying           | 
+ trading_system_identifier_des | character varying           | 
+Indexes:
+    "bbo_px_equity_euro_pkey" PRIMARY KEY, btree (bbo_file_date, ticker, exch_code, market_sector_des, id_bb_global)
+    "bbo_px_equity_euro_ticker_idx" btree (ticker, exch_code, market_sector_des, bbo_file_date, id_bb_global)
+
